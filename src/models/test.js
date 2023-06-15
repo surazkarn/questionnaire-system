@@ -1,45 +1,50 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const testSchema = new mongoose.Schema({
-  id: {
+  testId: {
     type: String,
-    required: true,
-    unique: true,
+    required: true
   },
-  title: {
+  testName: {
     type: String,
-    required: true,
+    required: true
   },
   questions: [
     {
-      id: {
+      questionId: {
         type: String,
-        required: true,
+        required: true
       },
-      text: {
+      questionText: {
         type: String,
-        required: true,
+        required: true
       },
       options: [
         {
-          id: {
+          optionId: {
             type: String,
-            required: true,
+            required: true
           },
-          text: {
+          optionText: {
             type: String,
-            required: true,
+            required: true
           },
-        },
+          isCorrect: {
+            type: Boolean,
+            required: true
+          }
+        }
       ],
       correctOptions: [
         {
           type: String,
-          required: true,
-        },
-      ],
-    },
-  ],
+          required: true
+        }
+      ]
+    }
+  ]
 });
 
-module.exports = mongoose.model('Test', testSchema);
+const Test = mongoose.model("Test", testSchema);
+
+module.exports = Test;
