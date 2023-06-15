@@ -2,6 +2,9 @@
 
 This project implements a REST API for a questionnaire system using Node.js and MongoDB. It allows users to sign up, sign in, edit or add phone number, and complete tests from a selection of available tests. The tests consist of multiple-choice questions (MCQs) with single or multiple correct answers. User responses are stored, and the score obtained is calculated and returned to the user.
 
+[Link to view Screenshots of postman request-response and MongoDB](https://docs.google.com/document/d/1lQquu2_3geDJ0u6dQge5-apQq4r60mMeHJjrXkCoCQ8/edit?usp=sharing)
+
+
 ## Prerequisites
 
 - Node.js
